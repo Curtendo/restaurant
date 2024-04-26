@@ -1,9 +1,5 @@
 import Tacos from './beeftacos.jpg';
 
-
-
-const contentDiv = document.querySelector("#content");
-
 function addHomeElements(contentDiv) {
     const newH1 = document.createElement("h1");
     newH1.classList.add("title");
