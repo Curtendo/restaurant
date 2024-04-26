@@ -1,5 +1,6 @@
 import { addHomeElements } from './home';
 import { addMenuElements } from './menu';
+import { addContactElements } from './contact';
 import './style.css';
 
 const contentDiv = document.querySelector("#content");
@@ -11,8 +12,8 @@ const contactButton = document.querySelector("#contact-button");
 function highlightNav(buttonID) {
     // Clear all selectors first
     const buttonArray = Array.from(navBar.children);
-    buttonArray.forEach((but) => {
-        but.classList.remove("nav-button-selected")
+    buttonArray.forEach((navButton) => {
+        navButton.classList.remove("nav-button-selected")
     })
 
     // Add highlight to current button
@@ -34,7 +35,7 @@ menuButton.addEventListener("click", function(e){
 
 contactButton.addEventListener("click", function(e){
     contentDiv.textContent = "";
-    addHomeElements(contentDiv);
+    addContactElements(contentDiv);
     highlightNav(e.target.id);
 })
 
